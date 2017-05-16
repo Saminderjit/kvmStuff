@@ -1,0 +1,24 @@
+// check hardware support
+lscpu
+grep -e 'vmx' /proc/cpuinfo
+lsmod | grep kvm
+
+//install packages
+yum install qemu-kvm qemu-img
+yum install virt-manager libvirt libvirt-python libvirt-client
+yum groupinstall virtualization-client virtualization-platform virtualization-tools
+
+
+//reload libvirtd daemon (server and host clients libs interaction with hypervisor communication enabler daemon process)
+systemctl restart libvirtd
+systemctl status libvirtd 	
+
+// default libvirtd location (all storage, images etc get stored here by default)
+/var/lib/libvirtd 
+
+
+// Enable IP forwarding in /etc/sysctl.conf by adding the following line:
+inet.ipv3.ip_forward=1
+
+// During the testing phase, if you have SELinux running, disable it by setting SELinux to permissive mode.
+
