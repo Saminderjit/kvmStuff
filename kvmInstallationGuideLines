@@ -22,3 +22,6 @@ inet.ipv3.ip_forward=1
 
 // During the testing phase, if you have SELinux running, disable it by setting SELinux to permissive mode.
 
+
+// install VM using q-cow2 image
+virt-install --accelerate  -n imageName  --description "Test image using qcow"  --ram=2048  --vcpus=2   --graphics none  --disk path=/var/lib/libvirt/images/<fileImage>.qcow2,size=25,format=qcow2  --network bridge:testvirtBr,model=virtio --boot network,hd --pxe --controller type=virtio-serial
