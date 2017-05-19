@@ -24,4 +24,5 @@ inet.ipv3.ip_forward=1
 
 
 // install VM using q-cow2 image
-virt-install --accelerate  -n imageName  --description "Test image using qcow"  --ram=2048  --vcpus=2   --graphics none  --disk path=/var/lib/libvirt/images/<fileImage>.qcow2,size=25,format=qcow2  --network bridge:testvirtBr,model=virtio --boot network,hd --pxe --controller type=virtio-serial
+virt-install --accelerate  -n pts  --description "Test pts qcow"  --ram=2048  --vcpus=2   --graphics none  --disk path=/var/lib/libvirt/images/ptsvpl-kvm-x86_64-7.40.0020.qcow2,size=25,format=qcow2  --network bridge=virbr0,model=virtio --boot hd --noautoconsole
+
