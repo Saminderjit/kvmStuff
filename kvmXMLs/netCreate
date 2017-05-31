@@ -1,0 +1,17 @@
+<network>
+  <name>testNW</name>
+  <uuid>b4ea6935-8b46-4915-aa07-9a4e326e564e</uuid>
+  <forward mode='nat'>
+    <nat>
+      <port start='1024' end='65535'/>
+    </nat>
+  </forward>
+  <bridge name='testBr' stp='on' delay='0'/>
+  <mac address='22:c8:52:7c:71:10'/>
+  <ip address='192.168.123.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='192.168.123.2' end='192.168.123.254'/>
+    </dhcp>
+  </ip>
+</network>
+
