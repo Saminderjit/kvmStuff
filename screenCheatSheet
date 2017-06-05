@@ -1,3 +1,3 @@
- screen -X -S 9653.pts-0.sw-e5-18vm  quit
+ screen -X -S 9653.vm  quit
 screen -ls
 screen -R <screenName>
