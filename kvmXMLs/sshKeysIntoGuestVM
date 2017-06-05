@@ -1,0 +1,9 @@
+# run following command to inject ssh keys into iso image
+bash sshScript --ssh-key ~/.ssh/id_rsa.pub image.iso
+
+# download guestVM qcow image
+
+# use virt-install to run guest VM and mention --disk path== iso as well as qcow2 images
+
+# user should be able to ssh into guest VM
+
